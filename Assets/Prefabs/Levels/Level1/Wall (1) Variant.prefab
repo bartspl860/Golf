@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &4997018183365922233
+--- !u!1001 &6010146647493997208
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1550886050865678972, guid: f74dbd2df8a31e54ca1848d0502c8bb6, type: 3}
       propertyPath: m_Name
-      value: Wall Variant
+      value: Wall (1)
       objectReference: {fileID: 0}
     - target: {fileID: 4689381729092579995, guid: f74dbd2df8a31e54ca1848d0502c8bb6, type: 3}
       propertyPath: m_RootOrder
@@ -17,11 +17,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4689381729092579995, guid: f74dbd2df8a31e54ca1848d0502c8bb6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2
+      value: 3.5
       objectReference: {fileID: 0}
     - target: {fileID: 4689381729092579995, guid: f74dbd2df8a31e54ca1848d0502c8bb6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4689381729092579995, guid: f74dbd2df8a31e54ca1848d0502c8bb6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -57,7 +57,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6097681397973381390, guid: f74dbd2df8a31e54ca1848d0502c8bb6, type: 3}
       propertyPath: m_SpriteTilingProperty.newSize.x
-      value: 6
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6097681397973381390, guid: f74dbd2df8a31e54ca1848d0502c8bb6, type: 3}
       propertyPath: m_SpriteTilingProperty.newSize.y
@@ -65,7 +65,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7579165184251710247, guid: f74dbd2df8a31e54ca1848d0502c8bb6, type: 3}
       propertyPath: m_Size.x
-      value: 6
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7579165184251710247, guid: f74dbd2df8a31e54ca1848d0502c8bb6, type: 3}
       propertyPath: m_Size.y

@@ -18,10 +18,11 @@ public class Progression : MonoBehaviour
     public Controls controlsComposite;
     public Levels levelsComposite;
 
-    private int currentLevel = 1;
+    private int currentLevel;
 
     private void Start()
     {
+        currentLevel = levelsComposite.GetStartLevel;
         ball = controlsComposite.ball.GetComponent<CircleCollider2D>();
     }
 
@@ -68,6 +69,10 @@ public class Progression : MonoBehaviour
                 {
                     currentLevel = 1;
                     levelsComposite.StartLevel(currentLevel);
+                }
+                catch (Exception ex)
+                {
+                    Debug.Log(ex.Message);
                 }
             }
         }        

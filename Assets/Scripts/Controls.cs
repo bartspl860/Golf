@@ -68,33 +68,6 @@ public class Controls : MonoBehaviour
             ballTrail.enabled = true;
         }
 
-        if(ballCollider2D.IsTouching(boardCollider2D) 
-            || ballCollider2D.IsTouchingLayers(layerObstacles))
-        {
-            AudioManager.instance.StopSound("Obstacle Hit");
-            AudioManager.instance.PlaySound("Obstacle Hit");
-
-            hitEdge = true;          
-        }
-        else
-        {
-            hitEdge = false;
-            onlyOnce = true;
-        }
-
-        if (hitEdge)
-        {
-            if (onlyOnce)
-            {
-                var hit = Instantiate(hitEffect);
-                hit.transform.position = ballTransform.position;
-
-                DestroyObject(hit, 3);
-
-                onlyOnce = false;
-            }
-        }
-
         mousePosition = Input.mousePosition;
         mousePosition.z = 10.0f;
         mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
@@ -116,8 +89,7 @@ public class Controls : MonoBehaviour
             pointerSpriteRenderer.enabled = true;
         }
             
-
-        if (Input.GetKey(KeyCode.Mouse0) && ballStopped && !levelOver)
+        if (Input.GetKey(KeyCode.Mouse0) && ballStopped && !levelOver && strenghtBar.fillAmount != 1f)
         {
             strikeStrength++;
             strenghtBar.fillAmount = strikeStrength / 100f;
