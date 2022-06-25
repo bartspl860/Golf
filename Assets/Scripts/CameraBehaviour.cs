@@ -47,10 +47,19 @@ public class CameraBehaviour : MonoBehaviour
 
         if (Input.GetMouseButton(2))
             ResetCameraPosition();
+
+        CameraZoom();
     }
 
     public void ResetCameraPosition()
     {
         Camera.main.transform.position = ResetCamera;
+        Camera.main.orthographicSize = 5;
     }
+
+    private void CameraZoom()
+    {
+        Camera.main.orthographicSize -= Input.mouseScrollDelta.y;
+        Camera.main.orthographicSize = Mathf.Clamp(Camera.main.orthographicSize, 1, 15);
+    }    
 }

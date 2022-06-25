@@ -30,7 +30,7 @@ public class Progression : MonoBehaviour
     private void FixedUpdate()
     {
         if (ball.IsTouching(hole) 
-            && controlsComposite.ballRb2d.velocity.magnitude < 2f)
+            && controlsComposite.ballRb2d.velocity.magnitude < 3f)
         {
             levelCompleted = true;
         }

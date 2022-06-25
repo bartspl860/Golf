@@ -88,7 +88,7 @@ public class Levels : MonoBehaviour
     }
     public void EndCurrentLevel()
     {
-        var walls = GameObject.FindGameObjectsWithTag("Wall");
+        var walls = GameObject.FindGameObjectsWithTag("Disposable");
 
         foreach (var wall in walls)
             DestroyObject(wall);
@@ -97,6 +97,9 @@ public class Levels : MonoBehaviour
         ball.transform.position = new Vector2(0f, 0f);
         ballTrail.Clear();
         ballRb2d.velocity = Vector2.zero;
+
+        cameraComposite.ResetCameraPosition();
+        
     }
 }
 [Serializable]
